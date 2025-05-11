@@ -22,11 +22,11 @@ class AppointmentUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-                'doctor_id'=>'required|exists:doctors,id',
-            'patient_id'=>'required|exists:patients,id',
-            'status'=>'required|in:confirmed,pending,cancelled',
+                'doctor_id'=>'sometimes|exists:doctors,id',
+            'patient_id'=>'sometimes|exists:patients,id',
+            'status'=>'sometimes|in:confirmed,pending,cancelled',
             'time'=>'sometimes',
-            'date'=>'nullable'
+            'date'=>'sometimes'
         ];
     }
 }

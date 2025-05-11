@@ -23,10 +23,10 @@ class PatientUpdateRequest extends FormRequest
     {
         return [
 
-        'name'  => 'required|string|max:255',
-        'email' => 'required|email|unique:patients,email',
-        'phone' => 'required|string|max:20',
-    
+        'name'  => 'sometimes|string|max:255',
+        'email' => 'sometimes|email|unique:patients,email',
+        'phone' => 'sometimes|string|max:20',
+
         ];
     }
 }

@@ -22,9 +22,9 @@ class DoctorUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-               'name'          => 'required|string|max:255',
-        'specialization'=> 'required|string|max:255',
-        'phone'         => 'required|string|max:20',
+               'name'          => 'sometimes|string|max:255',
+        'specialization'=> 'sometimes|string|max:255',
+        'phone'         => 'sometimes|string|max:20',
 
         ];
     }
